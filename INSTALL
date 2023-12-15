@@ -5,4 +5,15 @@
 # 1. All the packages you need to install
 # 2. How to configure various servers (e.g., Nginx, Apache, etc)
 
+echo "Installing server dependencies..."
+cd server
+pip install -r requirements.txt
+cd ..
+
+# Install client dependencies
+echo "Installing client dependencies..."
+cd client
+npm install
+cd ..
+
 npm install react-icons
