@@ -14,9 +14,9 @@ function PetListingPage() {
         fontWeight: "bold",
         fontSize: "45px",
         paddingLeft: "30px"
-        
+
     };
-    
+
     const gridStyle = {
         display: 'grid',
         gridTemplateRows: 'repeat(2, 1fr)',
@@ -24,7 +24,7 @@ function PetListingPage() {
         gap: '4px',
         padding: '4px',
     };
-    
+
     const divStyle = {
         display: 'flex',
         justifyContent: 'space-between', // Corrected value
@@ -32,12 +32,12 @@ function PetListingPage() {
         gap: '4px',
         padding: '4px',
     };
-    
-    
+
+
     const OptionsStyle = {
         border: "5px",
         color: "black"
-        
+
     };
     const fetchShelters = async () => {
         let queryString = 'http://127.0.0.1:8000/accounts/petshelter/';
@@ -82,12 +82,12 @@ function PetListingPage() {
     }
 
 
-    return(
-        <>  
+    return (
+        <>
             <div style={divStyle}>
                 <h1 style={welcomTextStyle}>Find them a forever home</h1>
-                <Grid  style={gridStyle}>
-                    
+                <Grid style={gridStyle}>
+
                     <GridItem style={OptionsStyle}>
                         <Select variant='filled' value={statusFilter} onChange={e => setStatusFilter(e.target.value)}>
                             <option value="">Filter by Status</option>
@@ -106,7 +106,7 @@ function PetListingPage() {
                             <option value="extra_large">Extra large</option>
                         </Select>
                     </GridItem>
-                        
+
                     <GridItem style={OptionsStyle}>
                         <Select variant='filled' value={shelterFilter} onChange={e => setShelterFilter(e.target.value)}>
                             <option value="">Filter by Shelter</option>
@@ -115,7 +115,7 @@ function PetListingPage() {
                             ))}
                         </Select>
                     </GridItem>
-                    
+
                     <GridItem style={OptionsStyle}>
                         <Select variant='filled' value={genderFilter} onChange={e => setGenderFilter(e.target.value)}>
                             <option value="">Filter by Sex</option>
@@ -131,7 +131,7 @@ function PetListingPage() {
                             <option value="descending">Descending</option>
                         </Select>
                     </GridItem>
-                    
+
                     <GridItem style={OptionsStyle}>
                         <Select variant='filled' value={sizeSort} onChange={e => setSizeSort(e.target.value)}>
                             <option value="">Sort by Size</option>
@@ -139,17 +139,17 @@ function PetListingPage() {
                             <option value="descending">Descending</option>
                         </Select>
                     </GridItem>
-                    
+
                 </Grid >
             </div>
-            
-            
-            <Grid templateColumns={columns} gap={6} justifyContent="center">
-            {petListings.map(pet => (
-                <PetListingCard key={pet.id} {...pet} /> // Spread operator to pass all pet properties as props
-            ))}
+
+
+            <Grid templateColumns={columns} m={6} gap={6} justifyContent="center">
+                {petListings.map(pet => (
+                    <PetListingCard key={pet.id} {...pet} /> // Spread operator to pass all pet properties as props
+                ))}
             </Grid>
-            
+
         </>
     )
 
