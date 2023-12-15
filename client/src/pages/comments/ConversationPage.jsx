@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Box, Input, Button, Flex, Badge, Text, Grid } from '@chakra-ui/react';
-import Message from '../../components/comments/Message';
+import Message from "../../components/comments/Message";
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
