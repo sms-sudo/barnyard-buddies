@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Box, Input, Button, Flex, Badge, Text, Grid } from '@chakra-ui/react';
-import Message from "../../components/comments/Message";
+import DMS from "../../components/comments/dms";
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
@@ -268,7 +268,7 @@ const ConversationPage = () => {
     >
       {Array.isArray(messages) &&
         messages.map((message, index) => (
-          <Message
+          <DMS
             key={index}
             text={message.comment_text}
             timestamp={message.comment_creation_time}
