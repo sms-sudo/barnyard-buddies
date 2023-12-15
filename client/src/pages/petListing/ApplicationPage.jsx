@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Grid, Box, Heading } from "@chakra-ui/react";
 import ApplicationCard from "../../components/petListings/ApplicationCard";
 import { useParams } from 'react-router-dom';
+import { API_URL } from '../../constants';
 
 function ApplicationsPage() {
     const [applications, setApplications] = useState([]);

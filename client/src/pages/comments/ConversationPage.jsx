@@ -3,6 +3,7 @@ import { Box, Input, Button, Flex, Badge, Text, Grid } from '@chakra-ui/react';
 import DMS from "../../components/comments/dms";
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import { API_URL } from '../../constants';
 
 const axiosInstance = axios.create();
 
@@ -50,7 +51,7 @@ const ConversationPage = () => {
 
   const fetchMessages = async () => {
     try {
-      const accounts_url = '${API_URL}';
+      const accounts_url = `${API_URL}`;
       const pet_seeker_detail_get_endpoint =
         accounts_url + `comments/applications/${appId}/?page=${currentPage}`;
 
@@ -91,7 +92,7 @@ const ConversationPage = () => {
 
   const handleSendContent = async () => {
     try {
-      const accounts_url = '${API_URL}';
+      const accounts_url = `${API_URL}`;
       const pet_seeker_detail_get_endpoint =
         accounts_url + `comments/applications/${appId}/`;
       const user_user = localStorage.getItem('user_user');

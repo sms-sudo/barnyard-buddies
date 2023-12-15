@@ -7,7 +7,7 @@ import { Card, Grid, Image, CardBody, Text, GridItem, Divider, Stack, Button, Ce
 import { EmailIcon } from "@chakra-ui/icons";
 import { useMediaQuery } from 'react-responsive'
 import TimeAgo from 'react-timeago'
-
+import { API_URL } from '../../constants';
 
 function PetListingDetailPage() {
     const navigate = useNavigate();

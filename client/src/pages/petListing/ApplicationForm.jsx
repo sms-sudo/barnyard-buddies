@@ -15,6 +15,7 @@ import {
 } from '@chakra-ui/react';
 import axios from 'axios';
 import { Navigate, useParams, useNavigate } from 'react-router-dom';
+import { API_URL } from '../../constants';
 
 const ApplicationForm = () => {
   const [applicationData, setApplicationData] = useState({

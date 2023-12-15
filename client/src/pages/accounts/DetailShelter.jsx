@@ -23,7 +23,7 @@ import {
   AlertDescription,
 } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
-import { API_URL } from '../constants.js';
+import { API_URL } from '../../constants';
 import Rating from '../../components/comments/stars';
 import RatingModal from '../../components/comments/rating';
 import useFetchPetListings from '../../hooks/FetchPetListings';
@@ -225,7 +225,7 @@ const ShelterDetailPage = () => {
   useEffect(() => {
     const getPetShelterDetails = async () => {
       try {
-        let accounts_url = '${API_URL}accounts/';
+        let accounts_url = `${API_URL}accounts/`;
         let pet_shelter_detail_get_endpoint =
           accounts_url + `petshelter/${petShelterID}/`;
         const resp = await fetch(pet_shelter_detail_get_endpoint);

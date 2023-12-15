@@ -29,7 +29,7 @@ import PetListingForm from './petListings/CreateUpdateListing';
 import React, { useRef, useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from '../contexts/AuthContext';
-import { API_URL } from '../constants.js';
+import { API_URL } from '../constants';
 
 
 const Links = [

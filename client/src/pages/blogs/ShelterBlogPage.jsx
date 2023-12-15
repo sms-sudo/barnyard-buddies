@@ -22,6 +22,7 @@ import {
   Alert,
   AlertIcon,
 } from '@chakra-ui/react';
+import { API_URL } from '../../constants';
 
 import { useParams } from 'react-router-dom';
 

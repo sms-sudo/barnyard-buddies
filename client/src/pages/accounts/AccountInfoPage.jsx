@@ -12,6 +12,7 @@ import {
     Text,
     VStack,
 } from '@chakra-ui/react';
+import { API_URL } from '../../constants';
 
 const AccountInfoPage = () => {
 
@@ -53,7 +54,7 @@ const AccountInfoPage = () => {
     };
 
     const handleDeleteNotiClk = () => {
-        const url = '${API_URL}notifications/delete_all/'; 
+        const url = `${API_URL}notifications/delete_all/`; 
         axios.delete(url, {
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
@@ -88,7 +89,7 @@ const AccountInfoPage = () => {
     useEffect(() => {
         const getCurrentUserInfo = async () => {
             try {
-                const response = await axios.get('${API_URL}accounts/user/', {
+                const response = await axios.get(`${API_URL}accounts/user/`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('access_token')}`,
                     },

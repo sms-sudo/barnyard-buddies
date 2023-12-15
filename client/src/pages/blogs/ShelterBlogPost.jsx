@@ -19,6 +19,7 @@ import { AiFillHeart } from 'react-icons/ai';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { API_URL } from '../../constants';
 
 const formatDate = (timestamp) => {
   const options = {

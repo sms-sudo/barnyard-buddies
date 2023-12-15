@@ -40,7 +40,7 @@ function PetListingPage() {
 
     };
     const fetchShelters = async () => {
-        let queryString = '${API_URL}accounts/petshelter/';
+        let queryString = `${API_URL}accounts/petshelter/`;
         try {
             const response = await axios.get(queryString);
             const shelterData = response.data.map(shelter => [shelter.id, shelter.name]);

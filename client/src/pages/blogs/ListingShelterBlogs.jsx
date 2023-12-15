@@ -10,6 +10,7 @@ import {
   Text,
   Select,
 } from '@chakra-ui/react';
+import { API_URL } from '../../constants';
 
 const formatDate = (timestamp) => {
   const options = {

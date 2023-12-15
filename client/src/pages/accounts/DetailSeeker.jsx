@@ -12,6 +12,7 @@ import {
     VStack,
 } from '@chakra-ui/react';
 import axios from 'axios';
+import { API_URL } from '../../constants';
 
 const PetSeekerDetailPage = () => {
     const { petSeekerID } = useParams();
@@ -50,7 +51,7 @@ const PetSeekerDetailPage = () => {
         );
     }
 
-    let backendURL = '${API_URL}'
+    let backendURL = `${API_URL}`
 
     return (
         <Container>

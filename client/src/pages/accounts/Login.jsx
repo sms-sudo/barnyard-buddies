@@ -15,6 +15,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../../constants';
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -54,7 +55,7 @@ const LoginPage = () => {
       setDisplayError(false);
       // Call 2: GET to /accounts/user-type/ to get user email and if user is pet shelter or not
       const user_context_info_resp = await fetch(
-        '${API_URL}accounts/user-type/',
+        `${API_URL}accounts/user-type/`,
         {
           method: 'GET',
           headers: {
@@ -75,7 +76,7 @@ const LoginPage = () => {
 
       // Call 3:
       const user_ids_resp = await fetch(
-        '${API_URL}accounts/user/',
+        `${API_URL}accounts/user/`,
         {
           method: 'GET',
           headers: {
