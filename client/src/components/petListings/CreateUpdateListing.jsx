@@ -54,7 +54,7 @@ const PetListingForm = forwardRef(({ onFormSubmitSuccess, predefinedValues }, re
             formData.append('date_posted', Date.now());
         }
     
-        const queryString = `API_URLpetListing/${isUpdate() ? `${petId}/` : ''}`;
+        const queryString = `${API_URL}petListing/${isUpdate() ? `${petId}/` : ''}`;
         const accessToken = localStorage.getItem('access_token')
         console.log(formData)
         try {

@@ -50,7 +50,7 @@ function NotificationDrawer({ isOpen, onClose , notificationList}) {
     };
 
     const handleUpdate = async (id) => {
-        const queryString = `API_URLnotifications/${id}/`;
+        const queryString = `${API_URL}notifications/${id}/`;
     
         try {
             const accessToken = localStorage.getItem('access_token');

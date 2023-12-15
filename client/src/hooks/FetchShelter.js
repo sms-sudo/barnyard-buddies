@@ -7,7 +7,7 @@ export const FetchShelter = (shelterId) => {
     useEffect(() => {
         const fetchShelter = async () => {
             try {
-                const response = await axios.get(`API_URLaccounts/petshelter/${shelterId}`);
+                const response = await axios.get(`${API_URL}accounts/petshelter/${shelterId}`);
                 setShelter(response.data.address);
             } catch (error) {
                 console.error('Error fetching shelter details:', error);

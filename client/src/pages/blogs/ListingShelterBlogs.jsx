@@ -40,7 +40,7 @@ const ShelterBlogsList = () => {
     const getListOfBlogPosts = async () => {
       try {
         const response = await axios.get(
-          `API_URLblogs/?ordering=${sorting}`
+          `${API_URL}blogs/?ordering=${sorting}`
         );
         if (response.status === 200) {
           setBlogPosts(response.data);

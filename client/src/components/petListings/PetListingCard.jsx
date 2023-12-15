@@ -44,7 +44,7 @@ function PetListingCard(pet) {
     useEffect(() => {
         const fetchShelter = async () => {
             try {
-                const response = await axios.get(`API_URLaccounts/petshelter/${pet.shelter}/`);
+                const response = await axios.get(`${API_URL}accounts/petshelter/${pet.shelter}/`);
                 setShelterAddress(response.data.address);
             } catch (error) {
                 console.error('Error fetching shelter details:', error);
@@ -75,7 +75,7 @@ function PetListingCard(pet) {
 
     const handleDelete = async () => {
         const petId = pet.id; // Assuming 'pet.id' contains the ID of the pet listing
-        const queryString = `API_URLpetListing/${petId}/`;
+        const queryString = `${API_URL}petListing/${petId}/`;
 
         try {
             const accessToken = localStorage.getItem('access_token');

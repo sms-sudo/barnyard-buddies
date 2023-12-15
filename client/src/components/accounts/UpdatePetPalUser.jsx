@@ -39,7 +39,7 @@ const UpdatePetPalUser = () => {
     useEffect(() => {
         const getCurrentUserInfo = async () => {
             try {
-                const response = await axios.get('API_URLaccounts/user/', {
+                const response = await axios.get('${API_URL}accounts/user/', {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('access_token')}`,
                     },
@@ -96,9 +96,9 @@ const UpdatePetPalUser = () => {
         let api_endpoint = '';
 
         if (isPetShelter) {
-            api_endpoint = `API_URLaccounts/petshelter/${updateFormData.id}/`;
+            api_endpoint = `${API_URL}accounts/petshelter/${updateFormData.id}/`;
         } else {
-            api_endpoint = `API_URLaccounts/petseeker/${updateFormData.id}/`;
+            api_endpoint = `${API_URL}accounts/petseeker/${updateFormData.id}/`;
         }
 
         const requestData = {

@@ -50,7 +50,7 @@ const ConversationPage = () => {
 
   const fetchMessages = async () => {
     try {
-      const accounts_url = 'API_URL';
+      const accounts_url = '${API_URL}';
       const pet_seeker_detail_get_endpoint =
         accounts_url + `comments/applications/${appId}/?page=${currentPage}`;
 
@@ -74,7 +74,7 @@ const ConversationPage = () => {
 
   const fetchApplication = async () => {
     try {
-      const url = `API_URLapplications/${appId}/`;
+      const url = `${API_URL}applications/${appId}/`;
 
 
       const response = await axiosInstance.get(url);
@@ -91,7 +91,7 @@ const ConversationPage = () => {
 
   const handleSendContent = async () => {
     try {
-      const accounts_url = 'API_URL';
+      const accounts_url = '${API_URL}';
       const pet_seeker_detail_get_endpoint =
         accounts_url + `comments/applications/${appId}/`;
       const user_user = localStorage.getItem('user_user');
@@ -161,7 +161,7 @@ const ConversationPage = () => {
   
   const handleStatusChange = async (newStatus) => {
     try {
-      const response = await axios.patch(`API_URLapplications/status/${application.id}/`, {
+      const response = await axios.patch(`${API_URL}applications/status/${application.id}/`, {
         status: newStatus
       }, {
         headers: {

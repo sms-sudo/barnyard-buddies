@@ -58,7 +58,7 @@ const ShelterBlogPage = () => {
     const getListOfBlogPosts = async () => {
       try {
         const response = await axios.get(
-          `API_URLblogs/?ordering=${sorting}&author=${authorId}`
+          `${API_URL}blogs/?ordering=${sorting}&author=${authorId}`
         );
         if (response.status === 200) {
           setBlogPosts(response.data);
@@ -110,7 +110,7 @@ const ShelterBlogPage = () => {
       formData.append('shelter_name', localStorage.getItem('user_name'));
       formData.append('image', image); // Append the image file
 
-      const response = await fetch(`API_URLblogs/`, {
+      const response = await fetch(`${API_URL}blogs/`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${accessToken}`,

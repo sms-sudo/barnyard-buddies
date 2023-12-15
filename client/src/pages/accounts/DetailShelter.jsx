@@ -71,7 +71,7 @@ const ShelterDetailPage = () => {
   useEffect(() => {
     const getPetShelterDetails = async () => {
       try {
-        let accounts_url = 'API_URLaccounts/';
+        let accounts_url = '${API_URL}accounts/';
         let pet_shelter_detail_get_endpoint =
           accounts_url + `petshelter/${petShelterID}/`;
         const resp = await fetch(pet_shelter_detail_get_endpoint);
@@ -156,7 +156,7 @@ const ShelterDetailPage = () => {
       let nextPage = 2;
 
       while (true) {
-        const additionalCommentsEndpoint = `API_URLcomments/shelters/${petShelterID}/?page=${nextPage}`;
+        const additionalCommentsEndpoint = `${API_URL}comments/shelters/${petShelterID}/?page=${nextPage}`;
         const additionalCommentsResp = await fetch(additionalCommentsEndpoint);
 
         if (additionalCommentsResp.ok) {
@@ -201,7 +201,7 @@ const ShelterDetailPage = () => {
   const [allCommentsLoaded, setAllCommentsLoaded] = useState(false);
   const getComments = async () => {
     try {
-      const commentsEndpoint = `API_URLcomments/shelters/${petShelterID}/`;
+      const commentsEndpoint = `${API_URL}comments/shelters/${petShelterID}/`;
       const commentsResp = await fetch(commentsEndpoint);
 
       if (commentsResp.ok) {
@@ -224,7 +224,7 @@ const ShelterDetailPage = () => {
   useEffect(() => {
     const getPetShelterDetails = async () => {
       try {
-        let accounts_url = 'API_URLaccounts/';
+        let accounts_url = '${API_URL}accounts/';
         let pet_shelter_detail_get_endpoint =
           accounts_url + `petshelter/${petShelterID}/`;
         const resp = await fetch(pet_shelter_detail_get_endpoint);
@@ -232,7 +232,7 @@ const ShelterDetailPage = () => {
           const resp_data = await resp.json();
           setPetShelterDetail(resp_data);
 
-          const commentsEndpoint = `API_URLcomments/shelters/${petShelterID}/`;
+          const commentsEndpoint = `${API_URL}comments/shelters/${petShelterID}/`;
           const commentsResp = await fetch(commentsEndpoint);
 
           if (commentsResp.ok) {
@@ -359,7 +359,7 @@ const ShelterDetailPage = () => {
 
       // POST comment
       const response = await fetch(
-        `API_URLcomments/shelters/${petShelterID}/`,
+        `${API_URL}comments/shelters/${petShelterID}/`,
         {
           method: 'POST',
           headers: {
