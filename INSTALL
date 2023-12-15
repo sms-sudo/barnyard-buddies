@@ -16,4 +16,5 @@ cd client
 npm install
 cd ..
 
+npm install -g npm
 npm install react-icons
