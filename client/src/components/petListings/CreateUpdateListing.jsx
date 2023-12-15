@@ -54,7 +54,7 @@ const PetListingForm = forwardRef(({ onFormSubmitSuccess, predefinedValues }, re
             formData.append('date_posted', Date.now());
         }
     
-        const queryString = `http://127.0.0.1:8000/petListing/${isUpdate() ? `${petId}/` : ''}`;
+        const queryString = `API_URLpetListing/${isUpdate() ? `${petId}/` : ''}`;
         const accessToken = localStorage.getItem('access_token')
         console.log(formData)
         try {

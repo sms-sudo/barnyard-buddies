@@ -50,7 +50,7 @@ function NotificationDrawer({ isOpen, onClose , notificationList}) {
     };
 
     const handleUpdate = async (id) => {
-        const queryString = `http://127.0.0.1:8000/notifications/${id}/`;
+        const queryString = `API_URLnotifications/${id}/`;
     
         try {
             const accessToken = localStorage.getItem('access_token');

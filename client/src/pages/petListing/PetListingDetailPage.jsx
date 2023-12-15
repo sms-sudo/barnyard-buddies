@@ -41,7 +41,7 @@ function PetListingDetailPage() {
 
 
     const fetchpetdetail = async () => {
-        let queryString = `http://127.0.0.1:8000/petListing/${petId}/`;
+        let queryString = `API_URLpetListing/${petId}/`;
         try {
             const response = await axios.get(queryString);
             setPet(response.data);
@@ -57,7 +57,7 @@ function PetListingDetailPage() {
     if (!pet) {
         return <div>Loading...</div>;
     }
-    const imageUrl = `http://127.0.0.1:8000/${pet.avatar}` || defaultImage;
+    const imageUrl = `API_URL${pet.avatar}` || defaultImage;
     let color;
     if (pet.status === 'pending'){
         color = '#ffc36d'; //yellow

@@ -38,7 +38,7 @@ const ApplicationForm = () => {
     };
 
     try {
-      const response = await axios.post(`http://127.0.0.1:8000/petListing/${petId}/applications/`, data,{
+      const response = await axios.post(`API_URLpetListing/${petId}/applications/`, data,{
         headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
             'Content-Type': 'application/json',

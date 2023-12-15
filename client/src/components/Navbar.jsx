@@ -80,7 +80,7 @@ export default function Simple() {
   const { isTokenPresent } = useAuth();
 
   const fetchnotifications = async () => {
-    const queryString = 'http://127.0.0.1:8000/notifications/';
+    const queryString = 'API_URLnotifications/';
 
     try {
       const response = await axios.get(queryString, {

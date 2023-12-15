@@ -39,7 +39,7 @@ const UpdatePetPalUser = () => {
     useEffect(() => {
         const getCurrentUserInfo = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/accounts/user/', {
+                const response = await axios.get('API_URLaccounts/user/', {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('access_token')}`,
                     },
@@ -96,9 +96,9 @@ const UpdatePetPalUser = () => {
         let api_endpoint = '';
 
         if (isPetShelter) {
-            api_endpoint = `http://127.0.0.1:8000/accounts/petshelter/${updateFormData.id}/`;
+            api_endpoint = `API_URLaccounts/petshelter/${updateFormData.id}/`;
         } else {
-            api_endpoint = `http://127.0.0.1:8000/accounts/petseeker/${updateFormData.id}/`;
+            api_endpoint = `API_URLaccounts/petseeker/${updateFormData.id}/`;
         }
 
         const requestData = {

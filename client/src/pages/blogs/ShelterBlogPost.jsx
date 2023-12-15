@@ -59,7 +59,7 @@ const BlogPost = () => {
       setIsShelter(is_pet_shelter_user);
 
       // Send the request to the server
-      const response = await fetch(`http://127.0.0.1:8000/blogs/${blogId}/`, {
+      const response = await fetch(`API_URLblogs/${blogId}/`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ const BlogPost = () => {
     const getPostDetails = async () => {
       try {
         const response = await axios.get(
-          `http://127.0.0.1:8000/blogs/posts/${blogId}/`
+          `API_URLblogs/posts/${blogId}/`
         );
         if (response.status === 200) {
           setBlogPost(response.data);
@@ -110,7 +110,7 @@ const BlogPost = () => {
   const handleDelete = async (blogId) => {
     try {
       const accessToken = localStorage.getItem('access_token');
-      const response = await fetch(`http://127.0.0.1:8000/blogs/${blogId}/`, {
+      const response = await fetch(`API_URLblogs/${blogId}/`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

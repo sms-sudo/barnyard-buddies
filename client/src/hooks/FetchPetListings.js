@@ -5,7 +5,7 @@ const useFetchPetListings = (filters, sortOptions) => {
     const [petListings, setPetListings] = useState([]);
 
     const fetchPetListings = async () => {
-        let queryString = 'http://127.0.0.1:8000/petListing/?';
+        let queryString = 'API_URLpetListing/?';
 
         // Append filters to the query string
         Object.keys(filters).forEach(key => {

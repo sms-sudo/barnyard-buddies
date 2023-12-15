@@ -40,7 +40,7 @@ function PetListingPage() {
 
     };
     const fetchShelters = async () => {
-        let queryString = 'http://127.0.0.1:8000/accounts/petshelter/';
+        let queryString = 'API_URLaccounts/petshelter/';
         try {
             const response = await axios.get(queryString);
             const shelterData = response.data.map(shelter => [shelter.id, shelter.name]);

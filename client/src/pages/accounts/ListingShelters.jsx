@@ -15,7 +15,7 @@ const ListingPetSheltersPage = () => {
     useEffect(() => {
         const getListOfPetShelters = async () => {
             try {
-                let accounts_url = 'http://127.0.0.1:8000/accounts/'
+                let accounts_url = 'API_URLaccounts/'
                 let pet_shelter_get_endpoint = accounts_url + 'petshelter/'
                 const resp = await fetch(pet_shelter_get_endpoint);
                 if (resp.ok) {

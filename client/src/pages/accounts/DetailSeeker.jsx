@@ -20,7 +20,7 @@ const PetSeekerDetailPage = () => {
     useEffect(() => {
         const getPetSeekerInfo = async () => {
             try {
-                const response = await axios.get(`http://127.0.0.1:8000/accounts/petseeker/${petSeekerID}/`, {
+                const response = await axios.get(`API_URLaccounts/petseeker/${petSeekerID}/`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('access_token')}`,
                     },
@@ -50,7 +50,7 @@ const PetSeekerDetailPage = () => {
         );
     }
 
-    let backendURL = 'http://127.0.0.1:8000/'
+    let backendURL = 'API_URL'
 
     return (
         <Container>

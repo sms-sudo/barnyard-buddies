@@ -54,7 +54,7 @@ const LoginPage = () => {
       setDisplayError(false);
       // Call 2: GET to /accounts/user-type/ to get user email and if user is pet shelter or not
       const user_context_info_resp = await fetch(
-        'http://127.0.0.1:8000/accounts/user-type/',
+        'API_URLaccounts/user-type/',
         {
           method: 'GET',
           headers: {
@@ -75,7 +75,7 @@ const LoginPage = () => {
 
       // Call 3:
       const user_ids_resp = await fetch(
-        'http://127.0.0.1:8000/accounts/user/',
+        'API_URLaccounts/user/',
         {
           method: 'GET',
           headers: {

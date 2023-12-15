@@ -32,9 +32,9 @@ const AccountInfoPage = () => {
         let api_endpoint = '';
 
         if (isPetShelter) {
-            api_endpoint = `http://127.0.0.1:8000/accounts/petshelter/${userInfoData.id}/`;
+            api_endpoint = `API_URLaccounts/petshelter/${userInfoData.id}/`;
         } else {
-            api_endpoint = `http://127.0.0.1:8000/accounts/petseeker/${userInfoData.id}/`;
+            api_endpoint = `API_URLaccounts/petseeker/${userInfoData.id}/`;
         }
 
         axios.delete(api_endpoint, {
@@ -53,7 +53,7 @@ const AccountInfoPage = () => {
     };
 
     const handleDeleteNotiClk = () => {
-        const url = 'http://127.0.0.1:8000/notifications/delete_all/'; 
+        const url = 'API_URLnotifications/delete_all/'; 
         axios.delete(url, {
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
@@ -88,7 +88,7 @@ const AccountInfoPage = () => {
     useEffect(() => {
         const getCurrentUserInfo = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/accounts/user/', {
+                const response = await axios.get('API_URLaccounts/user/', {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('access_token')}`,
                     },

@@ -90,9 +90,9 @@ const RegistrationPage = () => {
         let api_endpoint = '';
 
         if (accountType === 'pet_shelter') {
-            api_endpoint = 'http://127.0.0.1:8000/accounts/petshelter/';
+            api_endpoint = 'API_URLaccounts/petshelter/';
         } else if (accountType === 'pet_seeker') {
-            api_endpoint = 'http://127.0.0.1:8000/accounts/petseeker/';
+            api_endpoint = 'API_URLaccounts/petseeker/';
         }
 
         const requestData = {

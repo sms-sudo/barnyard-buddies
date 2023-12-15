@@ -12,9 +12,9 @@ function ApplicationsPage() {
         const fetchApplications = async () => {
             if (type == "true") {
                 console.log(type)
-                queryString = `http://127.0.0.1:8000/shelterApplicationsList/${user_user}/`
+                queryString = `API_URLshelterApplicationsList/${user_user}/`
             } else {
-                queryString = `http://127.0.0.1:8000/seekerApplicationsList/${user_user}/`
+                queryString = `API_URLseekerApplicationsList/${user_user}/`
             }
             
             try {
