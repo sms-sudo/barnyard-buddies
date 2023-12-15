@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { API_URL } from '../constants.js';
 
 export const FetchShelter = (shelterId) => {
     const [shelter, setShelter] = useState(null);

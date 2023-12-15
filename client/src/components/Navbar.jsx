@@ -29,6 +29,8 @@ import PetListingForm from './petListings/CreateUpdateListing';
 import React, { useRef, useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from '../contexts/AuthContext';
+import { API_URL } from '../constants.js';
+
 
 const Links = [
   { label: 'Search Pets', to: '/pet-listings' },
@@ -80,7 +82,7 @@ export default function Simple() {
   const { isTokenPresent } = useAuth();
 
   const fetchnotifications = async () => {
-    const queryString = '${API_URL}notifications/';
+    const queryString = `${API_URL}notifications/`;
 
     try {
       const response = await axios.get(queryString, {

@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { API_URL } from '../constants.js';
 
 const useFetchPetListings = (filters, sortOptions) => {
     const [petListings, setPetListings] = useState([]);
 
     const fetchPetListings = async () => {
-        let queryString = '${API_URL}petListing/?';
+        let queryString = `${API_URL}petListing/?`;
 
         // Append filters to the query string
         Object.keys(filters).forEach(key => {

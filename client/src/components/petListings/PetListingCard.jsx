@@ -27,7 +27,7 @@ import {
 } from '@chakra-ui/react';
 import PetListingForm from '../petListings/CreateUpdateListing';
 import PropTypes from 'prop-types';
-
+import { API_URL } from '../constants.js';
 
 function PetListingCard(pet) {
 
