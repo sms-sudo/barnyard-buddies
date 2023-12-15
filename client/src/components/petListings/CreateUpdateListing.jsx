@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { forwardRef, useImperativeHandle } from 'react';
 import { useForm } from 'react-hook-form';
 import { ErrorMessage } from "@hookform/error-message"
-import { API_URL } from '../constants.js';
+import { API_URL } from '../../constants';
 
 const PetListingForm = forwardRef(({ onFormSubmitSuccess, predefinedValues }, ref) => {
     const { register, handleSubmit, formState: { errors } } = useForm({

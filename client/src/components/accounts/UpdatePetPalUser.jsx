@@ -15,7 +15,7 @@ import {
     VStack,
 } from '@chakra-ui/react';
 import axios from 'axios';
-import { API_URL } from '../constants.js';
+import { API_URL } from '../../constants';
 
 
 const UpdatePetPalUser = () => {
@@ -40,7 +40,7 @@ const UpdatePetPalUser = () => {
     useEffect(() => {
         const getCurrentUserInfo = async () => {
             try {
-                const response = await axios.get('${API_URL}accounts/user/', {
+                const response = await axios.get(`${API_URL}accounts/user/`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('access_token')}`,
                     },

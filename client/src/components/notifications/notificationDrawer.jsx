@@ -4,7 +4,7 @@ import NotificationCard from './notificationCard';
 import React, {useState, useEffect} from 'react';
 import { TriangleDownIcon, TriangleUpIcon, ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import axios from 'axios';
-import { API_URL } from '../constants.js';
+import { API_URL } from '../../constants';
 
 
 function NotificationDrawer({ isOpen, onClose , notificationList}) {
