@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Grid, GridItem, Select } from "@chakra-ui/react";
 import { useMediaQuery } from 'react-responsive'
 import useFetchPetListings from "../../hooks/FetchPetListings";
-
+import { API_URL } from "../../constants";
 
 function PetListingPage() {
     const welcomTextStyle = {
